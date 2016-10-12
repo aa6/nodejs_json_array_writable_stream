@@ -23,4 +23,18 @@ describe("Basics",function()
         while(null !== (chunk = stream.read())) { result+= chunk }
         expect(result).toBe('[]')
     })
+
+    it("should process objects",function()
+    {
+        var stream = json_array_writable_stream()
+        var result = ""
+        var chunk
+        stream.write(1)
+        stream.write("string")
+        stream.write(function(){return null}) // TypeError: May not write null values to stream
+        stream.write({a:"Aa"})
+        stream.end()
+        while(null !== (chunk = stream.read())) { result+= chunk }
+        expect(result).toBe('[1,"string",null,{"a":"Aa"}]')
+    })
 })
