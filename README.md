@@ -7,5 +7,5 @@ stream.write("string")
 stream.write(function(){return null}) // TypeError: May not write null values to stream
 stream.write({a:"Aa"})
 stream.end()
-stream.pipe(process.stdout)
+stream.pipe(process.stdout) // [1,"string",null,{"a":"Aa"}]
 ```
