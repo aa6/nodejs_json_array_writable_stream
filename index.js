@@ -3,6 +3,7 @@ module.exports = function(input_options, stream_definition)
     var options = {}
     var transform_first_call = true
     // Preparing options.
+    input_options = (input_options != null) ? input_options : {}
     options.spaces = input_options.spaces
     options.replacer = input_options.replacer
     options.replace_undefined_by = input_options.replace_undefined_by
