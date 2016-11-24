@@ -10,3 +10,15 @@ stream.write({a:"Aa"})
 stream.end()
 stream.pipe(process.stdout) // [1,"string",null,{"a":"Aa"}]
 ```
+Available options:
+```javascript
+var stream = json_array_writable_stream(
+{
+    spaces: 0,
+    opening: "[",
+    closing: "]",
+    replacer: function(key, val) { return (key == "key1") ? "Replacement value." : val },
+    separator: ",\n",
+    replace_undefined_by: null // In case you want these keys to show up in your JSON.
+})
+```

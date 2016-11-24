@@ -1,6 +1,6 @@
 {
   "name": "json-array-writable-stream",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Packing objects into JSON array.",
   "main": "index.js",
   "scripts": {
