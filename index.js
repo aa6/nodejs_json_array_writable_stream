@@ -5,11 +5,14 @@ module.exports = function(input_options, stream_definition)
     // Preparing options.
     input_options = (input_options != null) ? input_options : {}
     options.spaces = input_options.spaces
+    options.opening = input_options.opening
+    options.closing = input_options.closing
     options.replacer = input_options.replacer
+    options.separator = input_options.separator
     options.replace_undefined_by = input_options.replace_undefined_by
-    if(input_options.opening == null) { options.opening = (options.spaces != null) ? "[\n" : "[" }
-    if(input_options.closing == null) { options.closing = (options.spaces != null) ? "\n]" : "]" }
-    if(input_options.separator == null) { options.separator = (options.spaces != null) ? ",\n" : "," }
+    if(options.opening == null) { options.opening = (options.spaces != null) ? "[\n" : "[" }
+    if(options.closing == null) { options.closing = (options.spaces != null) ? "\n]" : "]" }
+    if(options.separator == null) { options.separator = (options.spaces != null) ? ",\n" : "," }
     if(typeof options.replace_undefined_by != "undefined")
     {
         if(options.replacer != null)
