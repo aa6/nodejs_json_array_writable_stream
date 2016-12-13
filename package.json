@@ -1,19 +1,27 @@
 {
-  "name": "json-array-writable-stream",
-  "version": "0.1.2",
-  "description": "Packing objects into JSON array.",
-  "main": "index.js",
-  "scripts": {
-    "test": "node tests/support/jasmine-runner.js"
-  },
-  "devDependencies": {
-    "jasmine": "2.5.2",
-    "jasmine-spec-reporter": "2.5.0"
-  },
-  "author": "aa6",
-  "license": "AGPL-3.0",
-  "bugs": {
-    "url": "https://github.com/aa6/nodejs_json_array_writable_stream/issues"
-  },
-  "homepage": "https://github.com/aa6/nodejs_json_array_writable_stream"
+    "name": "json-array-writable-stream",
+    "version": "0.1.3",
+    "description": "Packing objects into JSON array.",
+    "main": "index.js",
+    "scripts": 
+    {
+        "test": "node tests/support/jasmine-runner.js"
+    },
+    "devDependencies": 
+    {
+        "jasmine": "2.5.2",
+        "jasmine-spec-reporter": "2.5.0"
+    },
+    "author": "aa6",
+    "license": "AGPL-3.0",
+    "bugs": 
+    {
+        "url": "https://github.com/aa6/nodejs_json_array_writable_stream/issues"
+    },
+    "homepage": "https://github.com/aa6/nodejs_json_array_writable_stream",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/aa6/nodejs_json_array_writable_stream.git"
+    }
 }
