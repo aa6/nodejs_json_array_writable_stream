@@ -1,3 +1,0 @@
-language: node_js
-node_js:
-  - "node" # Latest version of node.

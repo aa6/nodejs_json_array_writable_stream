@@ -5,8 +5,9 @@ var json_array_writable_stream = require("json-array-writable-stream")
 var stream = json_array_writable_stream()
 stream.write(1)
 stream.write("string")
-stream.write(function(){return null}) // TypeError: May not write null values to stream
+stream.write(null)
 stream.write({a:"Aa"})
+stream.write(void(0)) // Will ignore undefined by default
 stream.end()
 stream.pipe(process.stdout) // [1,"string",null,{"a":"Aa"}]
 ```

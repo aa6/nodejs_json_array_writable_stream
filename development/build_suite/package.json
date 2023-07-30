@@ -1,0 +1,15 @@
+{
+    "name": "dummy_js_package_build_suite",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "build": "node prestart.js && build() { node build.js $1; }; build",
+        "start": "node prestart.js && npm i . && npm run build"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "dependencies": {
+        "semver": "5.7.2"
+    }
+}
