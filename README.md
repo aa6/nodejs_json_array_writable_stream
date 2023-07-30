@@ -1,4 +1,4 @@
-# nodejs_json_array_writable_stream [![Travis CI badge](https://travis-ci.org/aa6/nodejs_json_array_writable_stream.svg?branch=master) Travis CI](https://travis-ci.org/aa6/nodejs_json_array_writable_stream)
+# nodejs_json_array_writable_stream
 Packing objects into JSON array.
 ```javascript
 var json_array_writable_stream = require("json-array-writable-stream")
