@@ -1,7 +1,7 @@
 {
     "name": "json-array-writable-stream",
     "main": "source_code/main.js",
-    "version": "1.0.3",
+    "version": "1.1.1",
     "scripts": {
         "build": "npm i . && node prestart.js && cd development/build_suite && npm run start",
         "test": "npm i . && node prestart.js && cd development/test_suite && npm run start"

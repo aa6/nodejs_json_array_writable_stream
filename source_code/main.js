@@ -12,7 +12,12 @@ module.exports = function(input_options, stream_definition)
     options.closing = input_options.closing
     options.replacer = input_options.replacer
     options.separator = input_options.separator
-    options.replace_undefined_by = input_options.replace_undefined_by
+    if(typeof input_options.replace_undefined_with != "undefined") 
+        { options.replace_undefined_by = input_options.replace_undefined_with }
+    if(typeof input_options.replace_undefined_to != "undefined") 
+        { options.replace_undefined_by = input_options.replace_undefined_to }
+    if(typeof input_options.replace_undefined_by != "undefined") 
+        { options.replace_undefined_by = input_options.replace_undefined_by }
     if(options.opening == null) { options.opening = (options.spaces != null) ? "[\n" : "[" }
     if(options.closing == null) { options.closing = (options.spaces != null) ? "\n]\n" : "]" }
     if(options.separator == null) { options.separator = (options.spaces != null) ? ",\n" : "," }
