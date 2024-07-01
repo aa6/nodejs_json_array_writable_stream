@@ -59,20 +59,31 @@ module.exports = function(input_options, stream_definition)
         {
             chunk = chunk[workaround_symbol]
         }
-        chunk = JSON.stringify(chunk, conveyor_replace_fn, options.spaces)
-        if(typeof chunk != "undefined")
+        try
         {
-            if(transform_first_call)
-            { 
-                transform_first_call = false
-                this.push(options.opening)
-            }
-            else
-            {
-                this.push(options.separator)
-            }
+            chunk = JSON.stringify(chunk, conveyor_replace_fn, options.spaces)
         }
-        done(null, chunk)
+        catch(err)
+        {
+            chunk = 'null'
+            throw err
+        }
+        finally
+        {
+            if(typeof chunk != "undefined")
+            {
+                if(transform_first_call)
+                { 
+                    transform_first_call = false
+                    this.push(options.opening)
+                }
+                else
+                {
+                    this.push(options.separator)
+                }
+            }
+            done(null, chunk)
+        }
     }
     stream_definition.flush = function(done)
     {
